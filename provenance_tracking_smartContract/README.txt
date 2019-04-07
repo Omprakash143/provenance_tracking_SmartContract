@@ -6,6 +6,7 @@ Smart contract name is : TrackingSystem.
 4. It can make sure that the product is reached to next stages in given time and can display a message if the product gets delayed at any stage and the amount of time the product delayed.
 5. Allow only right owner at right position to call the updateStages() method to update the stage(productAt).
 6. Make sure status is updated as per given owner(address) order i.e, pos2 owner cannot update the stage(productAt) before reaching the product to pos1 owner.
+7. Make sure that right product is updated by right owner(intermediary) provided with productID by the manufacturer(owner).
 
 
 TEST CASES:
