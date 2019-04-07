@@ -18,9 +18,10 @@ contract TrackingSystem{
 
 	// variable to refer productStages.
  		
-productStages public productAt;	
+    productStages public productAt;	
 							
-
+    //  productID
+    uint productID;
 	
 	uint public currentTime;
 
@@ -42,7 +43,7 @@ productStages public productAt;
 		mapping( bytes32 => address ) stageOwner; 	 
 
      	//constructor , an instance of TrackingSystem smart contract called when contract instance is created.
-		constructor(address ad1 , address ad2 , address ad3){	
+		constructor(address ad1 , address ad2 , address ad3 , uint pid){	
 		
 		// contract creator is the owner of the product.
 			owner = msg.sender;   
@@ -50,6 +51,9 @@ productStages public productAt;
  		// store the current time.					
 	
 		currentTime = now;
+		
+		// store pid to productID to verify correctness of product updatation.
+		productID = pid;
 
 
 		// store that product is verified by owner and moving towards pos1, store the product source stage.
@@ -84,9 +88,9 @@ productStages public productAt;
 
 
 
-	function updateProductStage() public{
-
-
+	function updateProductStage(uint id) public{
+        // stage will be updated only if correct productID is provided by all intermediaries.
+        require(productID == id);
 
 	//check product is moved from source to pos1.
 		if(productAt==productStages.source){
