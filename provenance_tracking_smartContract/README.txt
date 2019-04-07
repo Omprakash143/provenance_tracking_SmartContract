@@ -17,7 +17,7 @@ TEST CASES:
 	REASON: If not, the overall aim of this contract is useless. chances that some may pretend this product owner is X but they bought the product from Y.
 
 	3. Provide product delay time and message.
-	REASON: As time is important, upto how much time the product is safe can be dicidedby the consumer before buying the product.
+	REASON: As time is important, upto how much time the product is safe can be decided by the consumer before buying the product.
 
 	4. Only intermediary owner's allowed to invoke the updateStage() method.
 	REASON: To make sure the integrity of the product i.e, to make sure that the product is not modified and to find any fault easily.
