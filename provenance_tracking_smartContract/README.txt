@@ -21,3 +21,6 @@ TEST CASES:
 
 	4. Only intermediary owner's allowed to invoke the updateStage() method.
 	REASON: To make sure the integrity of the product i.e, to make sure that the product is not modified and to find any fault easily.
+	
+
+NOTE: check images in give order as 1,2,3,4,5,6 with description.
